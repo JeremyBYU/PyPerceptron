@@ -37,6 +37,8 @@ def main():
     perceptron = Perceptron(x_dim=2, learning_rate=0.101)
     all_data = perceptron.fit(X_list, Y_list, epochs=n_epochs)
 
+    input("Perceptron has been trained. Press ENTER to show animated graph of training and results")
+
 
     # All the remaining code is just for plotting data
     # Creating an animation of the data
