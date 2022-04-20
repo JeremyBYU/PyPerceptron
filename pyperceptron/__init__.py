@@ -46,7 +46,7 @@ class Perceptron():
 
         new_weights = []
         for w, x in zip(self.weights, point):
-            w = w + self.learning_rate * error * x
+            w = w + adjusted_learning_rate * error * x
             new_weights.append(w)
 
         self.weights = new_weights

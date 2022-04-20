@@ -33,14 +33,14 @@ def main():
     log.info("Creating perceptron and fitting data")
     X_list = X.tolist() 
     Y_list = Y.tolist()
-    n_epochs = 100
-    perceptron = Perceptron(x_dim=2, learning_rate=0.0004)
+    n_epochs = 50
+    perceptron = Perceptron(x_dim=2, learning_rate=0.101)
     all_data = perceptron.fit(X_list, Y_list, epochs=n_epochs)
 
 
     # All the remaining code is just for plotting data
     # Creating an animation of the data
-    fig, ax = plt.subplots(figsize=(20,7), nrows=1, ncols=3)
+    fig, ax = plt.subplots(figsize=(17,5), nrows=1, ncols=3)
     scat_true = ax[0].scatter(X[:,0], X[:,1], c=Y, s=50, cmap='viridis')
     scat_pred = ax[1].scatter(X[:,0], X[:,1], c=Y, s=50, cmap='viridis')
     seperating_line,  = ax[1].plot([], [], '--')
@@ -93,7 +93,7 @@ def main():
     plt.show()
     xdata = []
     ydata = []
-    ani.save('animation.gif', writer=PillowWriter(fps=15))
+    ani.save('animation.gif', writer=PillowWriter(fps=5))
 
 
 if __name__ == "__main__":
