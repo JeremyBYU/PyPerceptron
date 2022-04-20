@@ -1,7 +1,6 @@
 
 # I am purposefully keeps things extremely simple
 from numpy import random
-from tkinter import N
 from .logger import log
 
 random.seed(4)
